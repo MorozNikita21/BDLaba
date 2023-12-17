@@ -1,0 +1,290 @@
+use FishingCompany
+
+db.createCollection("Boats")
+db.createCollection("FishingTrips")
+db.createCollection("FishingBanks")
+
+db.Boats.insert({
+  "name": "Катер1",
+  "type": "Рыболовный",
+  "displacement": 100,
+  "buildDate": ISODate("2023-01-01")
+})
+
+db.FishingTrips.insert({
+  "boatName": "Катер1",
+  "crew": [
+    {"name": "Иванов", "position": "Капитан"},
+    {"name": "Петров", "position": "Боцман"}
+  ],
+  "departureDate": ISODate("2023-02-01T08:00:00Z"),
+  "returnDate": ISODate("2023-02-01T18:00:00Z"),
+  "fishCatch": [
+    {"species": "Треска", "weight": 50, "quality": "Отличное"},
+    {"species": "Лосось", "weight": 30, "quality": "Хорошее"}
+  ]
+})
+
+db.FishingBanks.insert({
+  "boatName": "Катер1",
+  "bankName": "Банка1",
+  "arrivalDate": ISODate("2023-02-01T10:00:00Z"),
+  "departureDate": ISODate("2023-02-01T14:00:00Z"),
+  "fishQuality": "Отличное"
+})
+
+db.Boats.insert({
+  "name": "Катер2",
+  "type": "Рыболовный",
+  "displacement": 120,
+  "buildDate": ISODate("2023-01-15")
+})
+
+db.FishingTrips.insert({
+  "boatName": "Катер2",
+  "crew": [
+    {"name": "Сидоров", "position": "Капитан"},
+    {"name": "Иванов", "position": "Боцман"}
+  ],
+  "departureDate": ISODate("2023-02-05T09:00:00Z"),
+  "returnDate": ISODate("2023-02-05T17:00:00Z"),
+  "fishCatch": [
+    {"species": "Тунец", "weight": 40, "quality": "Хорошее"},
+    {"species": "Макрель", "weight": 25, "quality": "Отличное"}
+  ]
+})
+
+db.FishingBanks.insert({
+  "boatName": "Катер2",
+  "bankName": "Банка2",
+  "arrivalDate": ISODate("2023-02-05T10:30:00Z"),
+  "departureDate": ISODate("2023-02-05T15:30:00Z"),
+  "fishQuality": "Хорошее"
+})
+
+db.Boats.insert({
+  "name": "Катер3",
+  "type": "Рыболовный",
+  "displacement": 110,
+  "buildDate": ISODate("2023-02-10")
+})
+
+db.FishingTrips.insert({
+  "boatName": "Катер3",
+  "crew": [
+    {"name": "Петров", "position": "Капитан"},
+    {"name": "Сидоров", "position": "Боцман"}
+  ],
+  "departureDate": ISODate("2023-02-20T07:30:00Z"),
+  "returnDate": ISODate("2023-02-20T16:30:00Z"),
+  "fishCatch": [
+    {"species": "Лосось", "weight": 35, "quality": "Отличное"},
+    {"species": "Тунец", "weight": 45, "quality": "Хорошее"}
+  ]
+})
+
+db.FishingBanks.insert({
+  "boatName": "Катер3",
+  "bankName": "Банка3",
+  "arrivalDate": ISODate("2023-02-20T09:00:00Z"),
+  "departureDate": ISODate("2023-02-20T14:00:00Z"),
+  "fishQuality": "Отличное"
+})
+
+db.Boats.insert({
+  "name": "Катер4",
+  "type": "Рыболовный",
+  "displacement": 95,
+  "buildDate": ISODate("2023-03-05")
+})
+
+db.FishingTrips.insert({
+  "boatName": "Катер4",
+  "crew": [
+    {"name": "Андреев", "position": "Капитан"},
+    {"name": "Смирнов", "position": "Боцман"}
+  ],
+  "departureDate": ISODate("2023-03-15T08:30:00Z"),
+  "returnDate": ISODate("2023-03-15T18:30:00Z"),
+  "fishCatch": [
+    {"species": "Камбала", "weight": 20, "quality": "Хорошее"},
+    {"species": "Минтай", "weight": 40, "quality": "Отличное"}
+  ]
+})
+
+db.FishingBanks.insert({
+  "boatName": "Катер4",
+  "bankName": "Банка4",
+  "arrivalDate": ISODate("2023-03-15T10:00:00Z"),
+  "departureDate": ISODate("2023-03-15T15:00:00Z"),
+  "fishQuality": "Хорошее"
+})
+
+db.Boats.insert({
+  "name": "Катер5",
+  "type": "Рыболовный",
+  "displacement": 105,
+  "buildDate": ISODate("2023-04-10")
+})
+
+db.FishingTrips.insert({
+  "boatName": "Катер5",
+  "crew": [
+    {"name": "Григорьев", "position": "Капитан"},
+    {"name": "Кузнецов", "position": "Боцман"}
+  ],
+  "departureDate": ISODate("2023-04-20T09:30:00Z"),
+  "returnDate": ISODate("2023-04-20T19:30:00Z"),
+  "fishCatch": [
+    {"species": "Осётр", "weight": 25, "quality": "Хорошее"},
+    {"species": "Креветки", "weight": 15, "quality": "Отличное"}
+  ]
+})
+
+db.FishingBanks.insert({
+  "boatName": "Катер5",
+  "bankName": "Банка5",
+  "arrivalDate": ISODate("2023-04-20T11:00:00Z"),
+  "departureDate": ISODate("2023-04-20T17:00:00Z"),
+  "fishQuality": "Отличное"
+})
+
+db.Boats.insert({
+  "name": "Катер6",
+  "type": "Рыболовный",
+  "displacement": 110,
+  "buildDate": ISODate("2023-05-15")
+})
+
+db.FishingTrips.insert({
+  "boatName": "Катер6",
+  "crew": [
+    {"name": "Сергеев", "position": "Капитан"},
+    {"name": "Михайлов", "position": "Боцман"}
+  ],
+  "departureDate": ISODate("2023-05-25T10:00:00Z"),
+  "returnDate": ISODate("2023-05-25T20:00:00Z"),
+  "fishCatch": [
+    {"species": "Морская форель", "weight": 30, "quality": "Отличное"},
+    {"species": "Угорь", "weight": 18, "quality": "Хорошее"}
+  ]
+})
+
+db.FishingBanks.insert({
+  "boatName": "Катер6",
+  "bankName": "Банка6",
+  "arrivalDate": ISODate("2023-05-25T12:30:00Z"),
+  "departureDate": ISODate("2023-05-25T18:30:00Z"),
+  "fishQuality": "Отличное"
+})
+
+db.Boats.insert({
+  "name": "Катер7",
+  "type": "Рыболовный",
+  "displacement": 100,
+  "buildDate": ISODate("2023-06-20")
+})
+
+db.FishingTrips.insert({
+  "boatName": "Катер7",
+  "crew": [
+    {"name": "Николаев", "position": "Капитан"},
+    {"name": "Тимофеев", "position": "Боцман"}
+  ],
+  "departureDate": ISODate("2023-07-01T11:00:00Z"),
+  "returnDate": ISODate("2023-07-01T21:00:00Z"),
+  "fishCatch": [
+    {"species": "Судак", "weight": 22, "quality": "Хорошее"},
+    {"species": "Лосось", "weight": 28, "quality": "Отличное"}
+  ]
+})
+
+db.FishingBanks.insert({
+  "boatName": "Катер7",
+  "bankName": "Банка7",
+  "arrivalDate": ISODate("2023-07-01T13:30:00Z"),
+  "departureDate": ISODate("2023-07-01T19:30:00Z"),
+  "fishQuality": "Отличное"
+})
+
+db.Boats.insert({
+  "name": "Катер8",
+  "type": "Рыболовный",
+  "displacement": 105,
+  "buildDate": ISODate("2023-08-10")
+})
+
+db.FishingTrips.insert({
+  "boatName": "Катер8",
+  "crew": [
+    {"name": "Павлов", "position": "Капитан"},
+    {"name": "Козлов", "position": "Боцман"}
+  ],
+  "departureDate": ISODate("2023-08-20T09:30:00Z"),
+  "returnDate": ISODate("2023-08-20T19:30:00Z"),
+  "fishCatch": [
+    {"species": "Макрель", "weight": 35, "quality": "Отличное"},
+    {"species": "Тунец", "weight": 25, "quality": "Хорошее"}
+  ]
+})
+
+db.FishingBanks.insert({
+  "boatName": "Катер8",
+  "bankName": "Банка8",
+  "arrivalDate": ISODate("2023-08-20T11:00:00Z"),
+  "departureDate": ISODate("2023-08-20T17:00:00Z"),
+  "fishQuality": "Отличное"
+})
+
+db.Boats.update(
+  { "name": "Катер1" },
+  { $set: { "name": "Doctor-Professor Schwarzenholt" } }
+)
+
+1)
+db.FishingTrips.aggregate([
+  { $match: { "boatName": "Doctor-Professor Schwarzenholt" } }
+])
+
+2)
+db.FishingTrips.aggregate([
+  { $match: { "boatName": "Doctor-Professor Schwarzenholt" } },
+  { $unwind: "$crew" },
+  { $project: { _id: 0, "Имя": "$crew.name", "Фамилия": "$crew.surname" } }
+])
+
+3)
+db.FishingTrips.aggregate([
+  { $unwind: "$crew" },
+  { $group: { _id: { name: "$crew.name", surname: "$crew.surname" }, tripsCount: { $sum: 1 } } },
+  { $project: { _id: 0, "Имя": "$_id.name", "Фамилия": "$_id.surname", "Количество выходов на лов": "$tripsCount" } }
+])
+
+4)
+db.FishingTrips.aggregate([
+  { $unwind: "$fishCatch" },
+  { $group: { _id: "$fishCatch.species", totalWeight: { $sum: "$fishCatch.weight" } } },
+  { $project: { _id: 0, "Сорт рыбы": "$_id", "Суммарный вес": "$totalWeight" } }
+])
+
+5)
+db.FishingTrips.aggregate([
+  { $unwind: "$crew" },
+  { $group: { _id: { name: "$crew.name", surname: "$crew.surname" }, positions: { $addToSet: "$crew.position" } } },
+  { $project: { _id: 0, "Имя": "$_id.name", "Фамилия": "$_id.surname", "Должности": "$positions" } }
+])
+
+6)
+db.FishingBanks.aggregate([
+  { $group: { _id: "$bankName", visitCount: { $sum: 1 } } },
+  { $sort: { visitCount: -1 } },
+  { $limit: 1 }
+])
+
+7)
+db.FishingBanks.aggregate([
+  { $unwind: "$fishCatch" },
+  { $group: { _id: "$bankName", totalWeight: { $sum: "$fishCatch.weight" } } },
+  { $sort: { totalWeight: -1 } },
+  { $limit: 1 }
+])
